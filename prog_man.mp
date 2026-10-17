@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="window-size" content="498x372">
+<title>Progman.mp</title>
+<style>
+body{margin:0;font-family:Arial,sans-serif;background:#f6f6f6;}
+.stage{position:relative;width:478px;height:332px;margin:0 auto;}
+.stage > *{position:absolute;margin:0;}
+button{padding:0 10px;height:25px;cursor:pointer;border:1px solid #8e8e8e;background:linear-gradient(#f4f4f4,#dedede);color:#202020;font-size:13px;}
+input{padding:0 5px;height:25px;width:180px;font-size:13px;border:1px solid #9a9a9a;box-sizing:border-box;}
+</style>
+</head>
+<body>
+<div class="stage">
+<button type="button" data-launch="terminal" style="left:0px;top:39px;">Terminal</button>
+<button type="button" data-launch="files" style="left:89px;top:39px;">Files</button>
+<button type="button" data-launch="settings" style="left:153px;top:39px;">Settings</button>
+<h2 style="left:0px;top:0px;color:#000000;font-weight:bold;">General</h2>
+<button type="button" data-launch="pcinfo" style="left:240px;top:39px;">PC Config info</button>
+<h2 style="left:0px;top:94px;color:#000000;font-weight:bold;">Work</h2>
+<button type="button" data-launch="notepad" style="left:0px;top:134px;">Notepad</button>
+<button type="button" data-launch="cretool" style="left:89px;top:134px;">Python</button>
+</div>
+</body>
+</html>
