@@ -2,55 +2,81 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
-<title></title>
+<title>Простой Word</title>
 <style>
-  body { font-family: sans-serif; margin: 0; background: #eee; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #e6e9ef;
+    padding: 20px;
+  }
+  .word {
+    max-width: 820px;
+    margin: 0 auto;
+    background: #fff;
+    border: 1px solid #c2c8d2;
+    border-radius: 6px;
+    overflow: hidden;
+  }
   .toolbar {
-    background: #f5f5f5;
-    border-bottom: 1px solid #ccc;
+    background: #f4f6f9;
+    border-bottom: 1px solid #c2c8d2;
     padding: 8px;
     display: flex;
-    gap: 6px;
     flex-wrap: wrap;
+    gap: 6px;
   }
   .toolbar button {
     padding: 5px 10px;
-    border: 1px solid #bbb;
+    border: 1px solid #aab1bb;
     background: #fff;
     cursor: pointer;
     font-size: 14px;
+    font-family: inherit;
   }
-  .toolbar button:hover { background: #e8e8e8; }
-  .page {
-    max-width: 800px;
-    margin: 20px auto;
-    background: #fff;
-    padding: 30px;
+  .toolbar button:hover { background: #e8eefc; }
+  .toolbar button:active { background: #d6e2fb; }
+
+  .editor {
     min-height: 500px;
-    border: 1px solid #ccc;
-    outline: none;
+    padding: 30px 40px;
     font-size: 16px;
-    line-height: 1.5;
+    line-height: 1.6;
+    color: #1f2a3f;
+    outline: none;
+    cursor: text;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  .editor:empty::before {
+    content: "Кликни сюда и начни печатать...";
+    color: #9aa5b5;
   }
 </style>
 </head>
 <body>
 
-<div class="toolbar">
-  <button onclick="document.execCommand('bold')"><b>Ж</b></button>
-  <button onclick="document.execCommand('italic')"><i>К</i></button>
-  <button onclick="document.execCommand('underline')"><u>Ч</u></button>
-  <button onclick="document.execCommand('insertUnorderedList')">• Список</button>
-  <button onclick="document.execCommand('insertOrderedList')">1. Список</button>
-  <button onclick="document.execCommand('justifyLeft')">←</button>
-  <button onclick="document.execCommand('justifyCenter')">↔</button>
-  <button onclick="document.execCommand('justifyRight')">→</button>
-  <button onclick="document.execCommand('formatBlock', false, 'h2')">H2</button>
-  <button onclick="document.execCommand('formatBlock', false, 'p')">Абзац</button>
-</div>
+<div class="word">
 
-<div class="page" contenteditable="true">
-  <p>Ваш текст</p>
+  <div class="toolbar">
+    <button type="button"><b>Ж</b></button>
+    <button type="button"><i>К</i></button>
+    <button type="button"><u>Ч</u></button>
+    <button type="button"><s>З</s></button>
+    <button type="button">Список</button>
+    <button type="button">Нумер.</button>
+    <button type="button">Слева</button>
+    <button type="button">Центр</button>
+    <button type="button">Справа</button>
+    <button type="button">H1</button>
+    <button type="button">H2</button>
+    <button type="button">Абзац</button>
+  </div>
+
+  <div class="editor" contenteditable="true" spellcheck="false"></div>
+
 </div>
 
 </body>
