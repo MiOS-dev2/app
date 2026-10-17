@@ -4,79 +4,48 @@
 <meta charset="UTF-8">
 <title>Простой Word</title>
 <style>
-  * { box-sizing: border-box; }
   body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #e6e9ef;
-    padding: 20px;
+    background: #f3f5f9;
   }
-  .word {
-    max-width: 820px;
-    margin: 0 auto;
+  .top {
+    background: #2d5fa8;
+    color: #fff;
+    padding: 16px 24px;
+  }
+  .top h1 { margin: 0; font-size: 24px; }
+  .wrap {
+    margin: 16px 24px;
     background: #fff;
-    border: 1px solid #c2c8d2;
-    border-radius: 6px;
-    overflow: hidden;
+    border: 1px solid #d0d7e2;
+    padding: 12px;
   }
-  .toolbar {
-    background: #f4f6f9;
-    border-bottom: 1px solid #c2c8d2;
-    padding: 8px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-  }
-  .toolbar button {
-    padding: 5px 10px;
-    border: 1px solid #aab1bb;
-    background: #fff;
-    cursor: pointer;
-    font-size: 14px;
-    font-family: inherit;
-  }
-  .toolbar button:hover { background: #e8eefc; }
-  .toolbar button:active { background: #d6e2fb; }
-
-  .editor {
+  textarea {
+    width: 100%;
     min-height: 500px;
-    padding: 30px 40px;
+    padding: 16px;
+    font-family: Arial, sans-serif;
     font-size: 16px;
     line-height: 1.6;
-    color: #1f2a3f;
+    border: 1px solid #c2c8d2;
     outline: none;
-    cursor: text;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+    resize: vertical;
+    box-sizing: border-box;
   }
-  .editor:empty::before {
-    content: "Кликни сюда и начни печатать...";
-    color: #9aa5b5;
+  textarea:focus {
+    border-color: #2d5fa8;
   }
 </style>
 </head>
 <body>
 
-<div class="word">
+<div class="top">
+  <h1>Простой Word</h1>
+</div>
 
-  <div class="toolbar">
-    <button type="button"><b>Ж</b></button>
-    <button type="button"><i>К</i></button>
-    <button type="button"><u>Ч</u></button>
-    <button type="button"><s>З</s></button>
-    <button type="button">Список</button>
-    <button type="button">Нумер.</button>
-    <button type="button">Слева</button>
-    <button type="button">Центр</button>
-    <button type="button">Справа</button>
-    <button type="button">H1</button>
-    <button type="button">H2</button>
-    <button type="button">Абзац</button>
-  </div>
-
-  <div class="editor" contenteditable="true" spellcheck="false"></div>
-
+<div class="wrap">
+  <textarea placeholder="Кликни сюда и начни печатать..."></textarea>
 </div>
 
 </body>
