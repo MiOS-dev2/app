@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
-<meta name="window-size" content="260x304">
+<meta name="window-size" content="334x426">
 <title>Калькулятор</title>
 <style>
 body{margin:0;font-family:Arial,sans-serif;background:#f6f6f6;}
